@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap');
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+* {
+	/* font-family: 'Open Sans', sans-serif; */
+	font-family: 'Ubuntu', sans-serif;
+	outline: none;
+}
+
+#app {
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+	padding: 0 40px;
+	background: linear-gradient(40deg, #cb2d3e, #ef473a);
+}
+
+.card {
+	display: inline-flex;
+	width: 600px;
+	border-radius: 4px;
+	overflow: hidden;
+	flex-direction: column;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card__title-bar {
+	display: flex;
+	align-self: flex-start;
+	width: 100%;
+	height: 28px;
+	line-height: 28px;
+	font-size: 12px;
+	font-weight: bold;
+	color: rgba(255, 255, 255, 0.7);
+	background-color: #263238;
+}
+
+.card__title-bar>div {
+	width: 100%;
+}
+
+.card__title {
+	text-align: center;
+}
+
+.card__controls {
+	padding: 0 8px;
+}
+
+.card__controls>.control {
+	display: block;
+	margin: 7px 2px;
+	width: 12px;
+	height: 12px;
+	float: left;
+	color: transparent;
+	background: white;
+	border-radius: 999px;
+}
+
+.card__controls>.control.control--red {
+	background-color: #f44336;
+}
+
+.card__controls>.control.control--yellow {
+	background-color: #ffeb3b;
+}
+
+.card__controls>.control.control--green {
+	background-color: #43a047;
+}
+
+
+.card__content {
+	font-family: 'Ubuntu Mono', monospace;
+	height: 400px;
+	overflow-y: auto;
+	padding: 10px;
+	font-size: 14px;
+	outline: 0;
+	width: 100%;
+	color: white;
+	background: #263238;
+}
+
+.card__content * {
+	font-family: 'Ubuntu Mono', monospace;
+}
+
+.card__footer {
+	text-align: center;
+	align-self: flex-end;
+	width: 100%;
+	height: 28px;
+	line-height: 28px;
+	font-size: 12px;
+	font-weight: bold;
+	color: rgba(255, 255, 255, 0.7);
+	background-color: #263238;
+}
