@@ -21,14 +21,37 @@
 					<div class="control control--yellow">.</div>
 					<div class="control control--green">.</div>
 				</div>
-				<div class="card__title" contenteditable="true">index.css</div>
-				<div class="card__title-space"></div>
+				<div class="card__title" contenteditable="true">index.html</div>
+				<div class="card__code-type" data-code-type="html">
+					<img src="lib/img/html.png" alt="html">
+				</div>
 			</div>
-			<div class="card__content"></div>
+			<div id="codeBlock" class="card__content highlight-block">
+				<pre></pre>
+			</div>
 			<div class="card__footer" contenteditable="true">&copy; 2019</div>
+		</div>
+		<div class="modal" id="codeEditor">
+			<div class="card card--code-editor">
+				<div class="card__title-bar">
+					<div class="card__title">EDITING: </div>
+				</div>
+				<div class="card__content" contenteditable="true">
+				</div>
+			</div>
+			<div class="card card--code-options">
+				<div class="card__content">
+					<button id="#save">save</button>
+					<button id="#beautify">beautify</button>
+				</div>
+			</div>
 		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.10.2/beautify.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.10.2/beautify-css.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.10.2/beautify-html.min.js"></script>
+	<script src="lib/js/index.js"></script>
 </body>
 
 </html>

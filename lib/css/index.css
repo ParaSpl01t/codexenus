@@ -18,14 +18,28 @@ html {
 	outline: none;
 }
 
+*::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background-color: rgba(245, 245, 245, 0.1);
+}
+
+*::-webkit-scrollbar {
+	width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+	border-radius: 8px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
 #app {
 	display: flex;
-	height: 100vh;
-	width: 100vw;
+	min-height: 100vh;
+	width: 100%;
 	justify-content: center;
 	align-items: center;
-	padding: 0 40px;
-	background: linear-gradient(40deg, #cb2d3e, #ef473a);
+	padding: 20px 40px;
+	/* background: linear-gradient(40deg, #cb2d3e, #ef473a); */
 }
 
 .card {
@@ -55,6 +69,17 @@ html {
 
 .card__title {
 	text-align: center;
+}
+
+.card__code-type {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0 8px;
+}
+
+.card__code-type>img {
+	height: 20px;
 }
 
 .card__controls {
@@ -95,6 +120,7 @@ html {
 	width: 100%;
 	color: white;
 	background: #263238;
+	cursor: pointer;
 }
 
 .card__content * {
@@ -111,4 +137,76 @@ html {
 	font-weight: bold;
 	color: rgba(255, 255, 255, 0.7);
 	background-color: #263238;
+}
+
+.modal {
+	position: fixed;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0);
+	cursor: pointer;
+}
+
+.modal .card,
+.modal .card * {
+	cursor: auto;
+}
+
+.modal.modal--active {
+	display: flex;
+}
+
+.hljs {
+	background: inherit;
+	padding: 0;
+}
+
+.card--code-editor {
+	width: calc(100vw - 40px);
+}
+
+.card--code-editor>.card__content {
+	height: calc(100vh - 118px);
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+pre {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+.card--code-options {
+	width: calc(100vw - 40px);
+	margin-top: 10px;
+}
+
+.card--code-options>.card__content {
+	height: 48px;
+	padding: 0;
+	overflow: hidden;
+}
+
+.card--code-options>.card__content>button {
+	height: 48px;
+	line-height: 48px;
+	padding: 0 16px;
+	float: left;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	color: rgba(255, 255, 255, 0.7);
+	text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.card--code-options>.card__content>button:hover {
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
