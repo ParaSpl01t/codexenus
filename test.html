@@ -10,11 +10,21 @@
 
 <body>
 	<button id="test">Test</button>
+	<button>Test</button>
+	<button>Test</button>
+	<button>Test</button>
+	<button>Test</button>
+	<button>Test</button>
+	<button>Test</button>
+	<button>Test</button>
+	<button>Test</button>
 	<script>
-		var btn = document.getElementById('test');
-		btn.addEventListener('click', () => {
-			console.table(this);
-		})
+		var buttons = document.querySelectorAll('button');
+		for (var i = 0; i < buttons.length; i++) {
+			buttons[i].addEventListener('click', function (event) {
+				console.log(this)
+			});
+		}
 	</script>
 </body>
 
